@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ASWeb" />
+        <module name="ASTranslator" />
+        <module name="ASDomain" />
+        <module name="ASRepository" />
+        <module name="ASWebSpringBoot" />
+        <module name="ASLogic" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="AS_domain" target="8" />
+      <module name="AS_web" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ASDomain" options="-parameters" />
+      <module name="ASLogic" options="-parameters" />
+      <module name="ASRepository" options="-parameters" />
+      <module name="ASTranslator" options="-parameters" />
+      <module name="ASWeb" options="-parameters" />
+      <module name="ASWebSpringBoot" options="-parameters" />
+    </option>
+  </component>
+</project>
