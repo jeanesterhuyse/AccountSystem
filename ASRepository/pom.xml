@@ -8,4 +8,8 @@
     </parent>
     <artifactId>AccountSystemRepository</artifactId>
     <packaging>jar</packaging>
+
+    <dependencies>
+
+    </dependencies>
 </project>

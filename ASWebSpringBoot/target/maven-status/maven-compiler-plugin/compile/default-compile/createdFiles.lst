@@ -1,2 +1,4 @@
 JeanEstProject\domain\web\sb\controller\AccountTypeController.class
+JeanEstProject\domain\web\sb\config\SwaggerConfiguration.class
 JeanEstProject\domain\web\sb\RestServiceApplication.class
+JeanEstProject\domain\web\sb\config\WebConfiguration.class
