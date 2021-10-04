@@ -11,4 +11,20 @@
     </parent>
     <artifactId>ASLogic</artifactId>
     <packaging>jar</packaging>
+    <dependencies>
+        <dependency>
+            <groupId>JeanEstProject</groupId>
+            <artifactId>ASDomain</artifactId>
+            <version>${project.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>JeanEstProject</groupId>
+            <artifactId>ASTranslator</artifactId>
+            <version>${project.version}</version>
+            <scope>compile</scope>
+        </dependency>
+
+
+    </dependencies>
 </project>
