@@ -1,1 +1,5 @@
 JeanEstProject\logic\config\LogicConfig.class
+JeanEstProject\logic\flow\impl\CreateAccountTypeFlowimpl.class
+JeanEstProject\logic\flow\FetchAccountTypeFlow.class
+JeanEstProject\logic\flow\impl\FetchAccountTypeFlowimpl.class
+JeanEstProject\logic\flow\CreateAccountTypeFlow.class

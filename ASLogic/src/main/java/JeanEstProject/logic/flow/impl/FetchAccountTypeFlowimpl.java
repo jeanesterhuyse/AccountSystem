@@ -11,14 +11,21 @@ import java.util.List;
 @Transactional
 @Component
 public class FetchAccountTypeFlowimpl implements FetchAccountTypeFlow {
-private final AccountTypeTranslator accountTypeTranslator;
+    private final AccountTypeTranslator accountTypeTranslator;
 
-@Autowired
-public FetchAccountTypeFlowimpl(AccountTypeTranslator accountTypeTranslator){
-    this.accountTypeTranslator=accountTypeTranslator;
-}
-@Override
+    @Autowired
+    public FetchAccountTypeFlowimpl(AccountTypeTranslator accountTypeTranslator){
+        this.accountTypeTranslator=accountTypeTranslator;
+    }
+    @Override
     public List<AccountTypeDTO> getAllAccountTypes() {
         return accountTypeTranslator.getAllAccountTypes();
+    }
+    @Override
+    public AccountTypeDTO getAccountTypeByMnemonic(String mnemonic){
+        return accountTypeTranslator.getAccountTypeByMnemonicNativeQuery(mnemonic);
+    }
+    public boolean methodTest(){
+        return true;
     }
 }

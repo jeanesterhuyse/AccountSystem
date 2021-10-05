@@ -5,4 +5,5 @@ import java.util.List;
 
 public interface FetchAccountTypeFlow {
     List<AccountTypeDTO> getAllAccountTypes();
+    AccountTypeDTO getAccountTypeByMnemonic(String mnemonic);
 }

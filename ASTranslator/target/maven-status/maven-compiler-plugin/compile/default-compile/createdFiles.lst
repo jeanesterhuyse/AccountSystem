@@ -1,1 +1,3 @@
 JeanEstProject\translator\config\TranslatorConfig.class
+JeanEstProject\translator\impl\AccountTypeTranslatorimpl.class
+JeanEstProject\translator\AccountTypeTranslator.class
