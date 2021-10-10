@@ -11,6 +11,7 @@
     </parent>
     <artifactId>ASLogic</artifactId>
     <packaging>jar</packaging>
+
     <dependencies>
         <dependency>
             <groupId>JeanEstProject</groupId>
@@ -24,8 +25,15 @@
             <version>${project.version}</version>
             <scope>compile</scope>
         </dependency>
-
-
-
     </dependencies>
+
+    <build>                                                 <!--Build for code coverage-->
+        <plugins>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>

@@ -13,6 +13,7 @@ import JeanEstProject.domain.persistence.AccountType;
 import JeanEstProject.repo.config.RepositoryTestConfig;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 @RunWith(SpringRunner.class)
 @DataJpaTest
 @ContextConfiguration(classes = {RepositoryTestConfig.class})
@@ -37,7 +38,7 @@ public class AccountTypeRepositoryTest {
 
     @Test
     public void getAccountTypeByMnemonicNativeQuery() {
-        AccountType miles = accountTypeRepository.getAccountTypeByMnemonicNativeQuery("MILESSS");
+        AccountType miles = accountTypeRepository.getAccountTypeByMnemonicNativeQuery("MILESS");
         assertNotNull(miles);
     }
 

@@ -1,39 +1,42 @@
 package JeanEstProject.domain.dto;
-
-
 import JeanEstProject.domain.persistence.AccountUser;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.Serializable;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.time.LocalDate;
 import java.util.Objects;
+import java.io.Serializable;
 
 @ApiModel(value="AccountUser",description="A dto that represents the account user")
 public class AccountUserDTO implements Serializable {
-    private static final long serialVersionUID = 4619913205443709973L;
+    private static final Logger LOGGER= LoggerFactory.getLogger(AccountUserDTO.class);
+    private static final long serialVersionUID = 8320124586839145675L;
     private String memberID;
     private String memberName;
     private LocalDate dateJoined;
-    private Long totalMiles;
-
+    private Long totalUnits;
 
     public AccountUserDTO(AccountUserDTO accountUser) {
     }
 
-    public AccountUserDTO(String memberID, String memberName, LocalDate dateJoined, Long totalMiles) {
+    public AccountUserDTO(String memberID, String memberName, LocalDate dateJoined, Long totalUnits) {
+       LOGGER.info("Constructor made for AccountUserDTO");
         this.memberID = memberID;
         this.memberName = memberName;
         this.dateJoined = dateJoined;
-        this.totalMiles = totalMiles;
+        this.totalUnits = totalUnits;
     }
+
     public AccountUserDTO(AccountUser accountUser) {
        this.setMemberID(accountUser.getMemberID());
        this.setMemberName(accountUser.getMemberName());
         this.setDateJoined(accountUser.getDateJoined());
-        this.setTotalMiles(accountUser.getTotalMiles());
-
+        this.setTotalUnits(accountUser.getTotalUnits());
     }
+
     public AccountUserDTO() {
     }
 
@@ -42,7 +45,7 @@ public class AccountUserDTO implements Serializable {
             name="MEMBER_ID",
             notes="Uniquely identifies user",
             dataType= "java.lang.String",
-            example="123",
+            example="112",
             required=true)
     public String getMemberID() {
         return memberID;
@@ -57,7 +60,7 @@ public class AccountUserDTO implements Serializable {
             name="MEMBER_NAME",
             notes="The name of the member",
             dataType= "java.lang.String",
-            example="Rian",
+            example="Jean",
             allowEmptyValue=false,
             required=true)
     public String getMemberName() {
@@ -71,9 +74,9 @@ public class AccountUserDTO implements Serializable {
     @ApiModelProperty(position=3,
             value= "Date joined",
             name="DATE_JOINED",
-            notes="The date that the member joined",
+            notes="The date that the member joined Discovery",
             dataType= "java.lang.String",
-            example="2020-01-01",
+            example="2019-01-01",
             allowEmptyValue=false,
             required=true)
     public LocalDate getDateJoined() {
@@ -85,24 +88,24 @@ public class AccountUserDTO implements Serializable {
     }
 
     @ApiModelProperty(position=4,
-            value= "Total Miles",
-            name="TOTAL_MILES",
-            notes="Total miles of member",
-            dataType= "java.lang.String",
-            example="200",
+            value= "Total Units",
+            name="TOTAL_UNITS",
+            notes="Total Units assigned to member",
+            dataType= "java.lang.Long",
+            example="250",
             allowEmptyValue=false,
             required=true)
-    public Long getTotalMiles() {
-        return totalMiles;
+    public Long getTotalUnits() {
+        return totalUnits;
     }
 
-    public void setTotalMiles(Long totalMiles) {
-        this.totalMiles = totalMiles;
+    public void setTotalUnits(Long totalUnits) {
+        this.totalUnits = totalUnits;
     }
 
     @JsonIgnore
     public AccountUser getAccountUser(){
-        return new AccountUser(getMemberID(),getMemberName(),getDateJoined(),getTotalMiles());
+        return new AccountUser(getMemberID(),getMemberName(),getDateJoined(),getTotalUnits());
     }
 
     @Override
@@ -110,21 +113,21 @@ public class AccountUserDTO implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         AccountUserDTO that = (AccountUserDTO) o;
-        return Objects.equals(memberID, that.memberID) && Objects.equals(memberName, that.memberName) && Objects.equals(dateJoined, that.dateJoined) && Objects.equals(totalMiles, that.totalMiles);
+        return Objects.equals(memberID, that.memberID) && Objects.equals(memberName, that.memberName) && Objects.equals(dateJoined, that.dateJoined) && Objects.equals(totalUnits, that.totalUnits);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(memberID, memberName, dateJoined, totalMiles);
+        return Objects.hash(memberID, memberName, dateJoined, totalUnits);
     }
 
     @Override
     public String toString() {
         return "AccountUserDTO{" +
                 "memberID=" + memberID +
-                ", memberName='" + memberName + '\'' +
+                ", memberName='" + memberName +
                 ", dateJoined=" + dateJoined +
-                ", totalMiles=" + totalMiles +
+                ", totalUnits=" + totalUnits +
                 '}';
     }
 }

@@ -1,4 +1,6 @@
 JeanEstProject\domain\dto\AccountTypeDTO.class
 JeanEstProject\domain\persistence\AccountTransaction.class
+JeanEstProject\domain\persistence\AccountUser.class
+JeanEstProject\domain\dto\AccountUserDTO.class
 JeanEstProject\domain\persistence\AccountType.class
 JeanEstProject\domain\service\GeneralResponse.class

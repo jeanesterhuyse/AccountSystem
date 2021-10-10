@@ -2,10 +2,12 @@ package JeanEstProject.logic.flow;
 
 import JeanEstProject.domain.dto.AccountUserDTO;
 
-import java.time.LocalDate;
+import javax.transaction.Transactional;
 
 public interface ModifyAccountUserFlow {
-    AccountUserDTO deleteAccountUser(String memberID);
 
-    AccountUserDTO updateAccountUser(String memberID, String newMemberName, LocalDate newDateJoined, Long newTotalMiles);
+@Transactional
+AccountUserDTO subtractUnits(Long units, String memberID);
+@Transactional
+AccountUserDTO addUnits(Long units,String memberID);
 }
