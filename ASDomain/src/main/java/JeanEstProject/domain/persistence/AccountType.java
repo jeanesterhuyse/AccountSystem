@@ -16,8 +16,6 @@ public class AccountType implements Serializable {
     private Set<AccountTransaction> accountTransactions;
     private Set<AccountUser> accountUsers;
     private static final long serialVersionUID = 4151563717429808530L;
-    @SequenceGenerator(name= "DISCOVERY_SEQ", sequenceName= "ACCOUNTSYSTEM.DISCOVERY_SEQ", allocationSize=1)
-    @GeneratedValue(strategy= GenerationType.SEQUENCE, generator= "DISCOVERY_SEQ")
     private Long TYPE_ID;
     private String mnemonic;
     private String accountTypeName;
@@ -34,6 +32,8 @@ public class AccountType implements Serializable {
         this.dateCreated = dateCreated;
     }
     @Id
+    @SequenceGenerator(name= "DISCOVERY_SEQ", sequenceName= "ACCOUNTSYSTEM.DISCOVERY_SEQ", allocationSize=1)
+    @GeneratedValue(strategy= GenerationType.SEQUENCE, generator= "DISCOVERY_SEQ")
     @Column(name= "TYPE_ID")
     public Long getTYPE_ID() {
 

@@ -11,18 +11,18 @@ import org.springframework.stereotype.Repository;
 public interface AccountUserRepository extends JpaRepository<AccountUser,
         Long> {
     @Query(value = "SELECT " +
-            " au "+
-            " FROM "+
-            " AccountUser au "+
-            " WHERE au.memberID = :member ")
-    AccountUser getAccountUserByMemberID(@Param("member") String memberID);
+            "au "+
+            "FROM "+
+            "AccountUser au "+
+            "WHERE au.memberID = :memberID ")
+    AccountUser getAccountUserByMemberID(@Param("memberID") String memberID);
 
     @Modifying
     @Query(value = "UPDATE " +
-            " AccountUser au "+
-            " SET au.totalUnits = :tu "+
-            " WHERE au.memberID = :member ")
-    void updateMember(@Param("tu") Long newUnits,@Param("member")String memberID);
+            "AccountUser au "+
+            "SET au.totalUnits = :totalUnits "+
+            "WHERE au.memberID = :memberID ")
+    void updateMember(@Param("totalUnits") Long newUnits,@Param("memberID")String memberID);
 
 }
 

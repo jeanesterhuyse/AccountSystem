@@ -1,5 +1,14 @@
-JeanEstProject\logic\config\LogicConfig.class
 JeanEstProject\logic\flow\impl\CreateAccountTypeFlowimpl.class
+JeanEstProject\logic\flow\ModifyAccountTypeFlow.class
+JeanEstProject\logic\flow\CreateAccountUserFlow.class
+JeanEstProject\logic\flow\impl\ModifyAccountUserFlowimpl.class
+JeanEstProject\logic\flow\impl\Modulo.class
+JeanEstProject\logic\flow\FetchAccountUserFlow.class
+JeanEstProject\logic\flow\impl\CreateAccountUserFlowimpl.class
+JeanEstProject\logic\flow\CreateAccountTypeFlow.class
+JeanEstProject\logic\flow\impl\ModifyAccountTypeFlowimpl.class
 JeanEstProject\logic\flow\FetchAccountTypeFlow.class
 JeanEstProject\logic\flow\impl\FetchAccountTypeFlowimpl.class
-JeanEstProject\logic\flow\CreateAccountTypeFlow.class
+JeanEstProject\logic\flow\impl\FetchAccountUserFlowimpl.class
+JeanEstProject\logic\config\LogicConfig.class
+JeanEstProject\logic\flow\ModifyAccountUserFlow.class

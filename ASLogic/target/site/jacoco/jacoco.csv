@@ -1,0 +1,9 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+ASLogic,JeanEstProject.logic.config,LogicConfig,3,0,0,0,1,0,1,0,1,0
+ASLogic,JeanEstProject.logic.flow.impl,Modulo,0,15,0,2,0,4,0,3,0,2
+ASLogic,JeanEstProject.logic.flow.impl,CreateAccountTypeFlowimpl,8,21,1,1,2,7,1,3,0,3
+ASLogic,JeanEstProject.logic.flow.impl,ModifyAccountTypeFlowimpl,17,0,0,0,7,0,4,0,4,0
+ASLogic,JeanEstProject.logic.flow.impl,FetchAccountTypeFlowimpl,13,12,0,0,3,5,2,3,2,3
+ASLogic,JeanEstProject.logic.flow.impl,CreateAccountUserFlowimpl,26,0,2,0,8,0,4,0,3,0
+ASLogic,JeanEstProject.logic.flow.impl,ModifyAccountUserFlowimpl,80,0,0,0,18,0,4,0,4,0
+ASLogic,JeanEstProject.logic.flow.impl,FetchAccountUserFlowimpl,30,0,0,0,9,0,4,0,4,0
