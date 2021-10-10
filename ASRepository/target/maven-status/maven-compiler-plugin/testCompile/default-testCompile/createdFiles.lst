@@ -1,2 +1,3 @@
 JeanEstProject\repo\config\RepositoryTestConfig.class
 JeanEstProject\repo\persistence\AccountTypeRepositoryTest.class
+JeanEstProject\repo\persistence\AccountUserRepositoryTest.class

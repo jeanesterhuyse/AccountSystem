@@ -107,9 +107,13 @@ public class AccountUserController {
                     required = true)
             @RequestParam("units") final Long units) {
         LOGGER.info("addUnits mapped succesfully");
-        AccountUserDTO accountUser = modifyAccountUserFlow.addUnits(units,memberID);
+        try{
+       AccountUserDTO accountUser = modifyAccountUserFlow.addUnits(units,memberID);
         GeneralResponse<AccountUserDTO> response = new GeneralResponse<>(true, accountUser);
-        return new ResponseEntity<>(response, HttpStatus.OK);
+        return new ResponseEntity<>(response, HttpStatus.OK);}catch (Exception e)
+        {
+            throw new RuntimeException("Could not add units due to error");
+        }
 
     }
 

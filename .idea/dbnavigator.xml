@@ -26,7 +26,7 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="e528d1a2-50d0-4451-bd1f-3a35dc0e492c">
-        <schema name="ACCOUNTSYSTEM" object-types="table, view, materialized view, synonym, sequence, procedure, function, package, type, database trigger, dimension, cluster, dblink" />
+        <schema name="ACCOUNTSYSTEM" object-types="table, view, materialized view, synonym, sequence, procedure, function, package, type, database trigger, dimension, cluster, dblink, constraint, index, column, dataset trigger, nested table" />
       </connection>
     </loaded-nodes>
   </component>
@@ -46,9 +46,6 @@
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
-  </component>
-  <component name="DBNavigator.Project.FileConnectionMappingManager">
-    <mapping file-url="file://$PROJECT_DIR$/ASRepository/src/test/resources/import.sql" connection-id="e528d1a2-50d0-4451-bd1f-3a35dc0e492c" session-id="MAIN" current-schema="ACCOUNTSYSTEM" />
   </component>
   <component name="DBNavigator.Project.MethodExecutionManager">
     <method-browser />

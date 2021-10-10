@@ -106,15 +106,15 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
                     <artifactId>jacoco-maven-plugin</artifactId>
                     <version>0.8.3</version>
                     <configuration>
-                        <!--TODO: Use: "mvn clean install -DhaltOnFailure=false" to continue builds locally that fail test coverage-->
                         <haltOnFailure>${haltOnFailure}</haltOnFailure>
                         <rules>
                             <rule>
                                 <element>CLASS</element>
                                 <excludes>
-                                    <exclude>za.ac.nwu.ac.domain.dto.*</exclude>
-                                    <exclude>za.ac.nwu.ac.logic.config.LogicConfig</exclude>
-                                    <exclude>za.ac.nwu.ac.repo.config.RepositoryConfig</exclude>
+                                    <exclude>JeanEstProject.domain.dto.*</exclude>
+                                    <exclude>JeanEstProject.logic.config.LogicConfig</exclude>
+                                    <exclude>JeanEstProject.repo.config.RepositoryConfig</exclude>
+
                                 </excludes>
                                 <limits>
                                     <limit>
@@ -162,5 +162,4 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
             </plugins>
         </pluginManagement>
     </build>
-
 </project>
